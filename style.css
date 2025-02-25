@@ -1,0 +1,159 @@
+/* Definición de variables globales de colores */
+:root {
+    --primary-color: #668aac;      /* Azul oscuro - Color principal de la marca */
+    --accent-color: #954d2d;       /* Marrón rojizo - Color de acento para elementos destacados */
+    --secondary-accent: #af7343;    /* Marrón claro - Color de acento secundario */
+    --background-color: #dac3a0;    /* Beige - Color de fondo principal */
+    --light-blue: #93c0d8;         /* Azul claro - Para elementos suaves y sutiles */
+    --warm-gray: #978477;          /* Gris cálido - Para elementos neutros */
+    --slate-blue: #7a9ab3;         /* Azul pizarra - Para elementos destacados */
+    --warm-brown: #bd976c;         /* Marrón cálido - Para acentos suaves */
+    --light-color: #FFFFFF;        /* Blanco - Para texto sobre fondos oscuros */
+    --dark-color: #333333;         /* Gris oscuro - Para texto principal */
+}
+
+/* Estilo del fondo del cuerpo de la página */
+body {
+    background-color: var(--background-color);
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra sutil para dar profundidad */
+}
+
+/* Configuración del contenedor del logo */
+.navbar-brand {
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos específicos para la imagen del logo */
+.navbar-brand img {
+    position: absolute;
+    height: 120px;
+    width: auto;
+    top: 0;
+    left: 0;
+    z-index: 1000;  /* Asegura visibilidad sobre otros elementos */
+    border: none;
+    outline: none;
+}
+
+/* Estilos de los enlaces de navegación */
+.navbar-nav .nav-link {
+    color: var(--light-color) !important;
+    margin: 0 5px;
+    padding: 8px 16px !important;
+    border-radius: 5px;
+    transition: all 0.3s ease;  /* Animación suave al interactuar */
+}
+
+/* Efecto hover en los enlaces de navegación */
+.navbar-nav .nav-link:hover {
+  background-color: var(--accent-color);
+  color: var(--light-color) !important;
+}
+
+/* Estilos del botón primario */
+.btn-primary {
+    background-color: #c94918;  /* Color naranja para botones principales */
+    border-color: #c94918;
+    color: var(--light-color);
+}
+
+/* Efecto hover en el botón primario */
+.btn-primary:hover {
+    background-color: var(--secondary-accent);
+    border-color: var(--secondary-accent);
+    color: var(--light-color);
+}
+
+/* Color del texto primario */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Estilo de la sección hero */
+.hero-section {
+    background-color: var(--background-color);
+    position: relative;
+    overflow: visible;
+}
+
+.hero-section .col-lg-6:last-child img {
+    position: relative;
+    transform: scale(1);
+    z-index: 2;
+    transition: transform 0.3s ease;
+    mask-image: linear-gradient( #af7343 80%, transparent);
+}
+
+.hero-section .col-lg-6:last-child img:hover {
+    transform: scale(1.25);
+}
+
+/* Estilo del formulario de seguimiento */
+.tracking-form {
+    border: 2px solid var(--primary-color);
+}
+
+/* Estilos de las tarjetas */
+.card {
+    background-color: var(--light-color);
+    transition: transform 0.3s ease;  /* Animación al pasar el mouse */
+}
+
+/* Efecto hover en las tarjetas */
+.card:hover {
+    transform: translateY(-5px);  /* Eleva ligeramente la tarjeta */
+}
+
+/* Clases de utilidad para fondos */
+.bg-light {
+    background-color: #FFFFFF !important;
+}
+
+.bg-dark {
+    background-color: var(--dark-color) !important;
+}
+
+/* Efecto hover en enlaces sociales */
+.social-links a:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Estilos para campos de formulario en foco */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);  /* Resplandor suave al enfocar */
+}
+
+/* Estilo para mensajes de error en formularios */
+.invalid-feedback {
+    color: var(--accent-color);
+}
+
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;  /* Verde característico de WhatsApp */
+    color: var(--light-color);
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+.btn-wsp:hover{
+    text-decoration: none;
+    color: #0df053;
+    background: #FFFFFF;
+}

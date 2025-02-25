@@ -1,0 +1,225 @@
+<!-- Estructura principal del documento HTML -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos y configuración de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulido Logística - Servicios de Mensajería y Paquetería</title>
+    <!-- Hojas de estilo externas -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+          <a class="navbar-brand" href="#"><img src="img/LogoPL.png" alt="Pulido Logística Logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#inicio">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#servicios">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#rastreo">Rastreo</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#contacto">Contacto</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Envíos seguros y puntuales</h1>
+                    <p class="lead mb-4">Tu mejor opción en servicios de mensajería y paquetería. Entrega rápida y segura garantizada.</p>
+                    <a href="https://api.whatsapp.com/send?phone=573223706584" class="btn-wsp" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+                    <div class="tracking-form bg-light p-4 rounded shadow-sm">
+                        <h4>Rastrear Envío</h4>
+                        <form id="trackingForm" class="mt-3">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Número de guía" required>
+                                <button class="btn btn-primary" type="submit">Rastrear</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <img src="./img/Imagen2.png" alt="Servicio de mensajería" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestros Servicios</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-box fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Paquetería</h5>
+                            <p class="card-text">Envío seguro de paquetes a nivel nacional con seguimiento en tiempo real.</p>
+                            <a href=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-truck fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Mensajería Express</h5>
+                            <p class="card-text">Entrega el mismo día para envíos urgentes dentro de la ciudad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-globe fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Logística Internacional</h5>
+                            <p class="card-text">Soluciones de envío internacional con trámites aduanales incluidos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por Qué Elegirnos Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">¿Por Qué Elegirnos?</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                        <h5>Puntualidad</h5>
+                        <p>Entregas a tiempo, siempre</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h5>Seguridad</h5>
+                        <p>Sus envíos protegidos</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                        <h5>Atención 24/7</h5>
+                        <p>Siempre disponibles</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="fas fa-dollar-sign fa-3x text-primary mb-3"></i>
+                        <h5>Precios Competitivos</h5>
+                        <p>Mejor relación calidad-precio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rastreo Section -->
+    <section id="rastreo" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-5">
+                            <h2 class="text-center mb-4">Rastrear Envío</h2>
+                            <form id="trackingFormLarge">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Ingrese número de guía" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg w-100">Rastrear Paquete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h2 class="text-center mb-4">Contáctanos</h2>
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre completo" required>
+                            <div class="invalid-feedback">Por favor ingrese su nombre</div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                            <div class="invalid-feedback">Por favor ingrese un correo válido</div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Teléfono" required>
+                            <div class="invalid-feedback">Por favor ingrese su teléfono</div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                            <div class="invalid-feedback">Por favor ingrese su mensaje</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Pulido Logística</h5>
+                    <p>Tu mejor opción en servicios de mensajería y paquetería</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-phone"></i> (+57) 322-3706584</p>
+                    <p><i class="fas fa-envelope"></i> info@pulidologistica.com</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=573223706584" class="text-white" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Pulido Logística. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
