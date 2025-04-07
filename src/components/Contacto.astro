@@ -1,0 +1,74 @@
+---
+import GoogleMap from './GoogleMap.astro';
+---
+<section id="contacto" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Contáctanos</h2>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="contact-info p-4 bg-light rounded shadow-sm">
+                    <h3 class="h4 mb-4">Información de Contacto</h3>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-map-marker-alt text-primary me-3 fa-2x"></i>
+                        <div>
+                            <h4 class="h6 mb-0">Ubicación</h4>
+                            <p class="mb-0">Bogotá, Colombia</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-phone text-primary me-3 fa-2x"></i>
+                        <div>
+                            <h4 class="h6 mb-0">Teléfono</h4>
+                            <p class="mb-0">(+57) 322-3706584</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-envelope text-primary me-3 fa-2x"></i>
+                        <div>
+                            <h4 class="h6 mb-0">Email</h4>
+                            <p class="mb-0">info@pulidologistica.com</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <GoogleMap />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <form class="contact-form p-4 bg-light rounded shadow-sm">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+:global(.contact-info), :global(.contact-form) {
+    transition: transform 0.3s ease;
+}
+
+:global(.contact-info:hover), :global(.contact-form:hover) {
+    transform: translateY(-5px);
+}
+
+:global(.text-primary) {
+    color: #0d6efd;
+}
+</style>

@@ -1,98 +1,90 @@
-<!-- Estructura principal del documento HTML -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Metadatos y configuración de la página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulido Logística - Servicios de Mensajería y Paquetería</title>
-    <!-- Hojas de estilo externas -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-          <a class="navbar-brand" href="#"><img src="img/LogoPL.png" alt="Pulido Logística Logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#inicio">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#servicios">Servicios</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#rastreo">Rastreo</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#contacto">Contacto</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
-
-    <!-- Hero Section -->
-    <section id="inicio" class="hero-section vh-100 d-flex align-items-center">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Envíos seguros y puntuales</h1>
-                    <p class="lead mb-4">Tu mejor opción en servicios de mensajería y paquetería. Entrega rápida y segura garantizada.</p>
-                    <a href="https://api.whatsapp.com/send?phone=573223706584" class="btn-wsp" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
-                    <div class="tracking-form bg-light p-4 rounded shadow-sm">
-                        <h4>Rastrear Envío</h4>
-                        <form id="trackingForm" class="mt-3">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Número de guía" required>
-                                <button class="btn btn-primary" type="submit">Rastrear</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <img src="./img/Imagen2.png" alt="Servicio de mensajería" class="img-fluid rounded shadow">
+            <a class="navbar-brand" href="#home">
+                <img src="img/LogoPL.png" alt="Pulido Logística Logo" height="48">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-white">
+                    <h1 class="display-4 fw-bold mb-4">Servicio de Entrega Rápida y Confiable en Bogotá</h1>
+                    <p class="lead mb-5">Entregas a tiempo, donde quieras, cuando lo necesites.</p>
+                    <a href="https://api.whatsapp.com/send?phone=573223706584" class="btn btn-glass me-3">Solicita tu entrega</a>
+                    <a href="https://api.whatsapp.com/send?phone=573223706584" class="btn-wsp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Servicios Section -->
-    <section id="servicios" class="py-5 bg-light">
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">Nuestros Servicios</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-box fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Paquetería</h5>
-                            <p class="card-text">Envío seguro de paquetes a nivel nacional con seguimiento en tiempo real.</p>
-                            <a href=""></a>
+                    <div class="card h-100">
+                        <img src="img/expressimg.jpg" class="card-img-top" alt="Servicio 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Entrega Express</h5>
+                            <p class="card-text">Servicio de entrega rápida en moto para envíos urgentes en la ciudad. Nuestro equipo de mensajeros motorizados expertos garantiza la entrega más veloz, navegando eficientemente por el tráfico de Bogotá. Ideal para documentos y paquetes que necesitan llegar a su destino en el menor tiempo posible, con seguimiento en tiempo real y confirmación inmediata.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-truck fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Mensajería Express</h5>
-                            <p class="card-text">Entrega el mismo día para envíos urgentes dentro de la ciudad.</p>
+                    <div class="card h-100">
+                        <img src="img/nacionales.jpg" class="card-img-top" alt="Mensajero Dedicado">
+                        <div class="card-body">
+                            <h5 class="card-title">Mensajero Dedicado</h5>
+                            <p class="card-text">Te asignamos un mensajero personal para gestionar todas tus diligencias. Ideal para radicación de documentos, trámites bancarios, compras específicas y entregas programadas. Tu mensajero de confianza estará disponible para realizar tus gestiones de manera eficiente y segura.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-globe fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Logística Internacional</h5>
-                            <p class="card-text">Soluciones de envío internacional con trámites aduanales incluidos.</p>
+                    <div class="card h-100">
+                        <img src="img/empresasimg.jpg" class="card-img-top" alt="Servicio 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Logística Empresarial</h5>
+                            <p class="card-text">Soluciones logísticas especializadas para tiendas virtuales y e-commerce. Gestionamos la entrega de tus paquetes en toda la ciudad, con servicio de pago contra entrega y planificación optimizada de rutas. Somos tu aliado confiable para hacer crecer tu negocio online.</p>
                         </div>
                     </div>
                 </div>
@@ -100,57 +92,56 @@
         </div>
     </section>
 
-    <!-- Por Qué Elegirnos Section -->
-    <section class="py-5">
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">¿Por Qué Elegirnos?</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="text-center">
-                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
-                        <h5>Puntualidad</h5>
-                        <p>Entregas a tiempo, siempre</p>
-                    </div>
+            <h2 class="text-center mb-5">Sobre Nosotros</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 nosotros-col">
+                    <img src="img/caja.jpg" alt="Logistics Box" class="img-fluid rounded shadow-lg" style="width: 100%; height: 400px; object-fit: cover;">
+                    
                 </div>
-                <div class="col-md-3">
-                    <div class="text-center">
-                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
-                        <h5>Seguridad</h5>
-                        <p>Sus envíos protegidos</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="text-center">
-                        <i class="fas fa-headset fa-3x text-primary mb-3"></i>
-                        <h5>Atención 24/7</h5>
-                        <p>Siempre disponibles</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="text-center">
-                        <i class="fas fa-dollar-sign fa-3x text-primary mb-3"></i>
-                        <h5>Precios Competitivos</h5>
-                        <p>Mejor relación calidad-precio</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rastreo Section -->
-    <section id="rastreo" class="py-5 bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card border-0 shadow">
-                        <div class="card-body p-5">
-                            <h2 class="text-center mb-4">Rastrear Envío</h2>
-                            <form id="trackingFormLarge">
-                                <div class="mb-3">
-                                    <input type="text" class="form-control form-control-lg" placeholder="Ingrese número de guía" required>
+                <div class="col-lg-6 nosotros-col">
+                    <h3 class="mb-4">Expertos en Logística y Mensajería</h3>
+                    <p class="lead mb-4">En Pulido Logística, nos dedicamos a brindar soluciones de mensajería y logística confiables y eficientes en Bogotá desde 2020.</p>
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-2 fa-2x"></i>
+                                <div>
+                                    <h4 class="h5 mb-2">Misión</h4>
+                                    <p class="mb-0">Facilitar el crecimiento de nuestros clientes a través de servicios logísticos innovadores y confiables.</p>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-lg w-100">Rastrear Paquete</button>
-                            </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-star text-primary me-2 fa-2x"></i>
+                                <div>
+                                    <h4 class="h5 mb-2">Visión</h4>
+                                    <p class="mb-0">Ser la empresa líder en soluciones logísticas en Bogotá, reconocida por nuestra excelencia y compromiso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-users text-primary me-2 fa-2x"></i>
+                                <div>
+                                    <h4 class="h5 mb-2">Equipo Profesional</h4>
+                                    <p class="mb-0">Personal capacitado y comprometido con la excelencia en el servicio.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-shield-alt text-primary me-2 fa-2x"></i>
+                                <div>
+                                    <h4 class="h5 mb-2">Seguridad Garantizada</h4>
+                                    <p class="mb-0">Protocolos de seguridad rigurosos para el manejo de sus envíos.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -158,28 +149,57 @@
         </div>
     </section>
 
-    <!-- Contacto Section -->
+    <!-- Sección de Contacto -->
     <section id="contacto" class="py-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <h2 class="text-center mb-4">Contáctanos</h2>
-                    <form id="contactForm" class="needs-validation" novalidate>
+            <h2 class="text-center mb-5">Contáctanos</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="contact-info p-4 bg-light rounded shadow-sm">
+                        <h3 class="h4 mb-4">Información de Contacto</h3>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-map-marker-alt text-primary me-3 fa-2x"></i>
+                            <div>
+                                <h4 class="h6 mb-0">Ubicación</h4>
+                                <p class="mb-0">Bogotá, Colombia</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone text-primary me-3 fa-2x"></i>
+                            <div>
+                                <h4 class="h6 mb-0">Teléfono</h4>
+                                <p class="mb-0">(+57) 322-3706584</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope text-primary me-3 fa-2x"></i>
+                            <div>
+                                <h4 class="h6 mb-0">Email</h4>
+                                <p class="mb-0">info@pulidologistica.com</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1421.776775217028!2d-74.11159909493286!3d4.748669004912343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1743194949478!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form class="contact-form p-4 bg-light rounded shadow-sm">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Nombre completo" required>
-                            <div class="invalid-feedback">Por favor ingrese su nombre</div>
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Correo electrónico" required>
-                            <div class="invalid-feedback">Por favor ingrese un correo válido</div>
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
                         </div>
                         <div class="mb-3">
-                            <input type="tel" class="form-control" placeholder="Teléfono" required>
-                            <div class="invalid-feedback">Por favor ingrese su teléfono</div>
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono">
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
-                            <div class="invalid-feedback">Por favor ingrese su mensaje</div>
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
                     </form>
@@ -189,37 +209,36 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5>Pulido Logística</h5>
+            <div class="row mb-4">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Pulido Logística</h5>
                     <p>Tu mejor opción en servicios de mensajería y paquetería</p>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Contacto</h5>
-                    <p><i class="fas fa-phone"></i> (+57) 322-3706584</p>
-                    <p><i class="fas fa-envelope"></i> info@pulidologistica.com</p>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Contacto</h5>
+                    <p class="mb-2"><i class="fas fa-phone me-2"></i> (+57) 322-3706584</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@pulidologistica.com</p>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Síguenos</h5>
-                    <div class="social-links">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=573223706584" class="text-white" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=573223706584" class="text-white" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="text-center">
-                <p class="mb-0">&copy; 2025 Pulido Logística. Todos los derechos reservados.</p>
-            </div>
+            <hr class="border-secondary">
+            <p class="text-center mb-0">&copy; 2025 Pulido Logística. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap 5.3 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

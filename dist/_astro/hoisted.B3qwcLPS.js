@@ -1,0 +1,1 @@
+import"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js";document.addEventListener("scroll",()=>{const e=document.querySelector(".custom-navbar");window.scrollY>50?e.classList.add("scrolled"):e.classList.remove("scrolled")});

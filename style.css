@@ -1,159 +1,370 @@
-/* Definición de variables globales de colores */
-:root {
-    --primary-color: #668aac;      /* Azul oscuro - Color principal de la marca */
-    --accent-color: #954d2d;       /* Marrón rojizo - Color de acento para elementos destacados */
-    --secondary-accent: #af7343;    /* Marrón claro - Color de acento secundario */
-    --background-color: #dac3a0;    /* Beige - Color de fondo principal */
-    --light-blue: #93c0d8;         /* Azul claro - Para elementos suaves y sutiles */
-    --warm-gray: #978477;          /* Gris cálido - Para elementos neutros */
-    --slate-blue: #7a9ab3;         /* Azul pizarra - Para elementos destacados */
-    --warm-brown: #bd976c;         /* Marrón cálido - Para acentos suaves */
-    --light-color: #FFFFFF;        /* Blanco - Para texto sobre fondos oscuros */
-    --dark-color: #333333;         /* Gris oscuro - Para texto principal */
-}
+/* Estilos personalizados para componentes específicos */
 
-/* Estilo del fondo del cuerpo de la página */
-body {
-    background-color: var(--background-color);
-}
-
-/* Estilos de la barra de navegación */
-.navbar {
-    background-color: var(--primary-color) !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra sutil para dar profundidad */
-}
-
-/* Configuración del contenedor del logo */
-.navbar-brand {
-  position: relative;
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-
-/* Estilos específicos para la imagen del logo */
-.navbar-brand img {
-    position: absolute;
-    height: 120px;
-    width: auto;
-    top: 0;
-    left: 0;
-    z-index: 1000;  /* Asegura visibilidad sobre otros elementos */
-    border: none;
-    outline: none;
-}
-
-/* Estilos de los enlaces de navegación */
-.navbar-nav .nav-link {
-    color: var(--light-color) !important;
-    margin: 0 5px;
-    padding: 8px 16px !important;
-    border-radius: 5px;
-    transition: all 0.3s ease;  /* Animación suave al interactuar */
-}
-
-/* Efecto hover en los enlaces de navegación */
-.navbar-nav .nav-link:hover {
-  background-color: var(--accent-color);
-  color: var(--light-color) !important;
-}
-
-/* Estilos del botón primario */
-.btn-primary {
-    background-color: #c94918;  /* Color naranja para botones principales */
-    border-color: #c94918;
-    color: var(--light-color);
-}
-
-/* Efecto hover en el botón primario */
-.btn-primary:hover {
-    background-color: var(--secondary-accent);
-    border-color: var(--secondary-accent);
-    color: var(--light-color);
-}
-
-/* Color del texto primario */
-.text-primary {
-    color: var(--primary-color) !important;
-}
-
-/* Estilo de la sección hero */
+/* Sección del héroe con imagen de fondo y superposición */
+/* Crea un fondo oscuro semitransparente sobre la imagen principal */
 .hero-section {
-    background-color: var(--background-color);
+    /* Aplica un degradado negro semitransparente sobre la imagen de fondo */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/heero.jpg');
+    /* Ajusta la imagen para cubrir todo el contenedor */
+    background-size: cover;
+    /* Centra la imagen de fondo */
+    background-position: center;
+    /* Establece la altura mínima al 100% de la ventana */
+    min-height: 100vh;
+}
+
+/* Barra de navegación con efecto de cristal */
+/* Estilo inicial de la barra de navegación */
+.custom-navbar {
+    /* Fondo transparente al inicio */
+    background-color: transparent;
+    /* Suaviza las transiciones de todos los cambios */
+    transition: all 0.3s ease;
+    /* Espaciado interno de la barra */
+    padding: 1rem 0;
+}
+
+/* Estilo de la barra de navegación al hacer scroll */
+.custom-navbar.scrolled {
+    /* Fondo blanco semitransparente */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Efecto de desenfoque tipo cristal */
+    backdrop-filter: blur(5px);
+    /* Sombra suave en la parte inferior */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los enlaces en la barra de navegación */
+.custom-navbar .nav-link {
+    /* Posicionamiento relativo para efectos */
     position: relative;
-    overflow: visible;
+    /* Espaciado interno del enlace */
+    padding: 0.5rem 1rem;
+    /* Margen entre enlaces */
+    margin: 0 0.25rem;
+    /* Color del texto en blanco */
+    color: #fff !important;
+    /* Bordes redondeados */
+    border-radius: 6px;
+    /* Transición suave para efectos */
+    transition: all 0.3s ease;
+    /* Fondo semitransparente */
+    background: rgba(255, 255, 255, 0.1);
+    /* Borde sutil */
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.hero-section .col-lg-6:last-child img {
-    position: relative;
-    transform: scale(1);
-    z-index: 2;
-    transition: transform 0.3s ease;
-    mask-image: linear-gradient( #af7343 80%, transparent);
+/* Efecto hover en los enlaces */
+.custom-navbar .nav-link:hover {
+    /* Mantiene el texto en blanco */
+    color: #fff !important;
+    /* Aumenta la transparencia del fondo */
+    background: rgba(255, 255, 255, 0.2);
+    /* Borde más visible */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Añade brillo alrededor */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    /* Eleva ligeramente el enlace */
+    transform: translateY(-2px);
 }
 
-.hero-section .col-lg-6:last-child img:hover {
-    transform: scale(1.25);
+/* Estilo de los enlaces al hacer scroll */
+.custom-navbar.scrolled .nav-link {
+    /* Cambia el color del texto a negro */
+    color: #000 !important;
+    /* Fondo oscuro muy sutil */
+    background: rgba(0, 0, 0, 0.05);
+    /* Borde oscuro sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo del formulario de seguimiento */
-.tracking-form {
-    border: 2px solid var(--primary-color);
+/* Efecto hover en los enlaces al hacer scroll */
+.custom-navbar.scrolled .nav-link:hover {
+    /* Mantiene el texto en negro */
+    color: #000 !important;
+    /* Oscurece ligeramente el fondo */
+    background: rgba(0, 0, 0, 0.1);
+    /* Borde más visible */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /* Sombra sutil */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos de las tarjetas */
+/* Botón flotante de WhatsApp */
+/* Estilo base del botón */
+.btn-wsp {
+    /* Fija el botón en la pantalla */
+    position: fixed;
+    /* Dimensiones del botón */
+    width: 55px;
+    height: 55px;
+    /* Alinea el icono verticalmente */
+    line-height: 55px;
+    /* Posición en la esquina inferior derecha */
+    bottom: 30px;
+    right: 30px;
+    /* Color de fondo de WhatsApp */
+    background: #0dc143;
+    /* Texto en blanco */
+    color: #fff;
+    /* Forma circular */
+    border-radius: 50px;
+    /* Centra el contenido */
+    text-align: center;
+    /* Tamaño del icono */
+    font-size: 30px;
+    /* Sombra suave */
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    /* Asegura que esté sobre otros elementos */
+    z-index: 100;
+    /* Transición suave para efectos */
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover del botón de WhatsApp */
+.btn-wsp:hover {
+    /* Elimina el subrayado del enlace */
+    text-decoration: none;
+    /* Mantiene el color de fondo */
+    background: #0dc143;
+    /* Mantiene el texto en blanco */
+    color: #fff;
+    /* Aumenta ligeramente el tamaño */
+    transform: scale(1.1);
+}
+
+/* Ajustes adicionales */
+/* Estilo base de las tarjetas */
 .card {
-    background-color: var(--light-color);
-    transition: transform 0.3s ease;  /* Animación al pasar el mouse */
+    /* Transición suave para la elevación */
+    transition: transform 0.3s ease;
+    /* Sombra inicial */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Efecto hover en las tarjetas */
 .card:hover {
-    transform: translateY(-5px);  /* Eleva ligeramente la tarjeta */
+    /* Eleva la tarjeta */
+    transform: translateY(-5px);
 }
 
-/* Clases de utilidad para fondos */
-.bg-light {
-    background-color: #FFFFFF !important;
+/* Estilo de los iconos sociales */
+.social-icons a {
+    /* Transición suave de la opacidad */
+    transition: opacity 0.3s ease;
 }
 
-.bg-dark {
-    background-color: var(--dark-color) !important;
+/* Efecto hover en iconos sociales */
+.social-icons a:hover {
+    /* Reduce la opacidad */
+    opacity: 0.8;
 }
 
-/* Efecto hover en enlaces sociales */
-.social-links a:hover {
-    color: var(--accent-color) !important;
+/* Estilos para las tarjetas de servicios */
+/* Estilo de las imágenes en las tarjetas */
+.card-img-top {
+    /* Altura fija para todas las imágenes */
+    height: 250px;
+    /* Ajusta la imagen manteniendo proporciones */
+    object-fit: cover;
+    /* Ocupa todo el ancho disponible */
+    width: 100%;
 }
 
-/* Estilos para campos de formulario en foco */
-.form-control:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);  /* Resplandor suave al enfocar */
+/* Estructura de la tarjeta */
+.card {
+    /* Ocupa todo el alto disponible */
+    height: 100%;
+    /* Usa flexbox para la distribución */
+    display: flex;
+    /* Organiza el contenido verticalmente */
+    flex-direction: column;
 }
 
-/* Estilo para mensajes de error en formularios */
-.invalid-feedback {
-    color: var(--accent-color);
+/* Contenido de la tarjeta */
+.card-body {
+    /* Permite que el contenido crezca */
+    flex: 1;
+    /* Espaciado interno */
+    padding: 1.5rem;
 }
 
-.btn-wsp {
-    position: fixed;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    bottom: 30px;
-    right: 30px;
-    background: #0df053;  /* Verde característico de WhatsApp */
-    color: var(--light-color);
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
-    z-index: 100;
-}
-.btn-wsp:hover{
+/* Botón con efecto de cristal */
+/* Estilo base del botón */
+.btn-glass {
+    /* Fondo blanco casi opaco */
+    background: rgba(255, 255, 255, 0.999);
+    /* Efecto de desenfoque tipo cristal */
+    backdrop-filter: blur(10px);
+    /* Borde sutil */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Color de texto oscuro */
+    color: #0c0c0cec;
+    /* Espaciado interno */
+    padding: 0.8rem 2rem;
+    /* Peso de la fuente */
+    font-weight: 500;
+    /* Bordes muy redondeados */
+    border-radius: 30px;
+    /* Transición suave para efectos */
+    transition: all 0.3s ease;
+    /* Elimina el subrayado */
     text-decoration: none;
-    color: #0df053;
-    background: #FFFFFF;
+    /* Sombra inicial */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover del botón de cristal */
+.btn-glass:hover {
+    /* Fondo más transparente */
+    background: rgba(255, 255, 255, 0.2);
+    /* Borde más visible */
+    border-color: rgba(255, 255, 255, 0.3);
+    /* Texto en blanco */
+    color: #fff;
+    /* Eleva ligeramente el botón */
+    transform: translateY(-2px);
+    /* Sombra más pronunciada */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para la sección de contacto */
+.contact-info, .contact-form {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info:hover, .contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control {
+    border: 2px solid #e9ecef;
+    padding: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.contact-form .form-label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form .btn-primary {
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.contact-info i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
+    margin-right: 1rem;
+    color: #0d6efd;
+    transition: all 0.3s ease;
+}
+
+.contact-info:hover i {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h4 {
+    color: #212529;
+    margin-bottom: 0.3rem;
+}
+
+.contact-info p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* Mejoras profesionales para las secciones */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+section:not(.hero-section) {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #0d6efd;
+}
+
+/* Mejoras para las tarjetas de servicios */
+.card {
+    border: none;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #212529;
+    margin: 1rem 0;
+}
+
+.card-text {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Mejoras tipográficas */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    color: #212529;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.8;
 }

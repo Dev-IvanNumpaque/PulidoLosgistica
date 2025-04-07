@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import CajaImg from "../../public/caja.jpg";
+---
+<section id="nosotros" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Sobre Nosotros</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 nosotros-col">
+                <Image src={CajaImg} alt="Logistics Box" class="img-fluid rounded shadow-lg" style="width: 100%; height: 400px; object-fit: cover;" />
+            </div>
+            <div class="col-lg-6 nosotros-col">
+                <h3 class="mb-4">Expertos en Logística y Mensajería</h3>
+                <p class="lead mb-4">En Pulido Logística, nos dedicamos a brindar soluciones de mensajería y logística confiables y eficientes en Bogotá desde 2020.</p>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle text-primary me-2 fa-2x"></i>
+                            <div>
+                                <h4 class="h5 mb-2">Misión</h4>
+                                <p class="mb-0">Facilitar el crecimiento de nuestros clientes a través de servicios logísticos innovadores y confiables.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-star text-primary me-2 fa-2x"></i>
+                            <div>
+                                <h4 class="h5 mb-2">Visión</h4>
+                                <p class="mb-0">Ser la empresa líder en soluciones logísticas en Bogotá, reconocida por nuestra excelencia y compromiso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-users text-primary me-2 fa-2x"></i>
+                            <div>
+                                <h4 class="h5 mb-2">Equipo Profesional</h4>
+                                <p class="mb-0">Personal capacitado y comprometido con la excelencia en el servicio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-shield-alt text-primary me-2 fa-2x"></i>
+                            <div>
+                                <h4 class="h5 mb-2">Seguridad Garantizada</h4>
+                                <p class="mb-0">Protocolos de seguridad rigurosos para el manejo de sus envíos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+:global(.nosotros-col) {
+    transition: opacity 0.3s ease;
+}
+
+:global(.nosotros-col:hover) {
+    opacity: 0.9;
+}
+
+:global(.text-primary) {
+    color: #0d6efd;
+}
+</style>

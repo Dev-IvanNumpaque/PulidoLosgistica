@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import ExpressImg from "../../public/expressimg.jpg";
+import NacionalesImg from "../../public/nacionales.jpg";
+import EmpresasImg from "../../public/empresasimg.jpg";
+---
+<section id="servicios" class="py-5" aria-label="Nuestros Servicios">
+    <div class="container">
+        <h2 class="text-center mb-5">Nuestros Servicios</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100" role="article">
+                    <Image 
+                        src={ExpressImg} 
+                        class="card-img-top" 
+                        alt="Servicio de entrega express en moto" 
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="card-body">
+                        <h3 class="card-title h5">Entrega Express</h3>
+                        <p class="card-text">Servicio de entrega rápida en moto para envíos urgentes en la ciudad. Nuestro equipo de mensajeros motorizados expertos garantiza la entrega más veloz, navegando eficientemente por el tráfico de Bogotá. Ideal para documentos y paquetes que necesitan llegar a su destino en el menor tiempo posible, con seguimiento en tiempo real y confirmación inmediata.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" role="article">
+                    <Image 
+                        src={NacionalesImg} 
+                        class="card-img-top" 
+                        alt="Servicio de mensajero dedicado" 
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="card-body">
+                        <h3 class="card-title h5">Mensajero Dedicado</h3>
+                        <p class="card-text">Te asignamos un mensajero personal para gestionar todas tus diligencias. Ideal para radicación de documentos, trámites bancarios, compras específicas y entregas programadas. Tu mensajero de confianza estará disponible para realizar tus gestiones de manera eficiente y segura.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" role="article">
+                    <Image 
+                        src={EmpresasImg} 
+                        class="card-img-top" 
+                        alt="Servicio de logística empresarial" 
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="card-body">
+                        <h3 class="card-title h5">Logística Empresarial</h3>
+                        <p class="card-text">Soluciones logísticas especializadas para tiendas virtuales y e-commerce. Gestionamos la entrega de tus paquetes en toda la ciudad, con servicio de pago contra entrega y planificación optimizada de rutas. Somos tu aliado confiable para hacer crecer tu negocio online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+:global(.card) {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+:global(.card:hover) {
+    transform: translateY(-5px);
+}
+
+:global(.card-img-top) {
+    height: 200px;
+    object-fit: cover;
+}
+</style>
